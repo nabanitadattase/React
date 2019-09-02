@@ -1,68 +1,39 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this assignment you will create a Todo List, the React way. This means you'll be thinking in reusable components and pass dynamic data through to each of them.
 
-## Available Scripts
+Create a todo list called Static List with three list items:
+Static List
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* Get out of bed, Wed Sep 13 2017
+* Brush teeth, Thu Sep 14 2017
+* Eat breakfast, Fri Sep 15 2017
+Divide the list into reusable components (create at least 2)
+Make sure the container component is class-based
+Reuse one component at least 3 times
+Each list item should have a prop of description and deadline
+Write for each component a short summary of what it does and the role of the prop (in case there is one) in a JavaScript comment
+const RandomHello = () => { return <h1>Hello there!</h1> }
+// The goal of this component is to insert a random greeting in page
+Create a second todo list underneath the first (reuse the same components) called Dynamic List, but this time pass the props dynamically using the following JSON code:
+[
+  {
+    "id": 1,
+    "description": "Get out of bed",
+    "deadline": "2017-09-11",
+    "done": true
+  },
+  {
+    "id": 2,
+    "description": "Brush teeth",
+    "deadline": "2017-09-10",
+    "done": false
+  },
+  {
+    "id": 3,
+    "description": "Eat breakfast",
+    "deadline": "2017-09-09",
+    "done": false
+  }
+]
+Import the JSON code
+Use the map() function to dynamically render components
+Using CSS (a conditional className) , cross out the item if done is true
